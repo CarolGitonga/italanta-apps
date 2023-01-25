@@ -28,8 +28,18 @@
         </div>
 
         <div *ngSwitchCase="emailtype">
+            <mat-sidenav-container class="example-container">
+                <mat-sidenav mode="side" opened>Sidenav
+                    <br>
+                    <i class="fas fa-phone-alt"></i>
+                    <br>
+                    <i class="far fa-comment-alt"></i>
+                </mat-sidenav>
+                <mat-sidenav-content>
             <app-email-block [id]="id" [block]="block" [emailMessageForm]="blockFormGroup" [jsPlumb]="jsPlumb" class="block">
             </app-email-block>
+        </mat-sidenav-content>
+        </mat-sidenav-container>
         </div>
 
         <div *ngSwitchCase="phonetype">
